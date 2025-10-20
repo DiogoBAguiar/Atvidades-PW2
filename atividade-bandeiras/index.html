@@ -3,74 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade Bandeiras</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        header {
-            margin-bottom: 20px;
-        }
-
-        #flag {
-            display: flex-grid ;
-            grid-template-columns: repeat(6, 1fr);
-            max-width: 1200px;
-            margin: 1x auto;
-            
-        }
-        figure {
-   
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 10px;
-            background-color: #f9f9f9;
-        }
-        img {
-            width: 100px;
-
-        }
-
-
-    </style>
+    <title>Galeria de Bandeiras do Mundo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Bandeiras</h1>
+        <h1>Flags</h1>
     </header>
-    <main>
-        <section id="flag">
-        </section>
-    </main>
 
-    <script>
-        const flags = [
-            { name: "Brasil", image: "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg" },
-            { name: "Argentina", image: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg" },
-            { name: "Chile", image: "https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" },
-            { name: "Colômbia", image: "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" },
-            { name: "Peru", image: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg" },
-            { name: "Uruguai", image: "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Uruguay.svg" }
-        ];
+    <main id="gallery-container" class="gallery-grid"></main>
 
-        const flagSection = document.getElementById("flag");
-
-        flags.forEach(flag => {
-
-            const figure = document.createElement("figure");
-            const img = document.createElement("img");
-            img.src = flag.image;
-            img.alt = `Bandeira de ${flag.name}`;
-            const caption = document.createElement("figcaption");
-            caption.textContent = flag.name;
-
-            figure.appendChild(img);
-            figure.appendChild(caption);
-            flagSection.appendChild(figure);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
